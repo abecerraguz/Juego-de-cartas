@@ -59,19 +59,25 @@ const algoDif = new Efecto(
     "aumentar la resistencia del objectivo en 3",
     "res",
     3
-);
-
-const rechazo = new Efecto(
+  );
+  const rechazo = new Efecto(
     "Rechazo de promesa no manejado",
     1,
     "reducir la resistencia del objetivo en 2",
     "res",
     -2
   );
+  const pareja = new Efecto(
+    "Programación en pareja",
+    3,
+    "aumentar el poder del objetivo en 2",
+    "poder",
+    2
+  );
 
 
 algoDif.aplicar(ninjaRed);
-
 rechazo.aplicar(ninjaBlack);
+pareja.atacar(ninjaRojo);
 console.table({ ninjaRed, ninjaBlack });
 
